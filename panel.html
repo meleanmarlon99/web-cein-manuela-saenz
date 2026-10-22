@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Panel administrativo | CEIN Manuela Sáenz</title>
+
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body class="pagina-panel">
+
+  <header class="cabecera-panel">
+    <div class="contenedor cabecera-panel-contenido">
+
+      <div>
+        <h1>Panel administrativo</h1>
+        <p>CEIN “Manuela Sáenz”</p>
+      </div>
+
+      <div class="acciones-panel">
+        <a href="index.html" class="boton-secundario">
+          Ver página pública
+        </a>
+
+        <button id="boton-cerrar-sesion" class="boton-peligro">
+          Cerrar sesión
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <main class="contenedor panel-principal">
+
+    <section class="bienvenida-panel">
+      <h2>Gestión de información institucional</h2>
+      <p id="correo-usuario">Verificando acceso...</p>
+    </section>
+
+    <section class="panel-cuadricula">
+
+      <article class="panel-formulario">
+        <h2>Publicar evento, reunión o efeméride</h2>
+
+        <form id="formulario-evento">
+
+          <label for="tipo-evento">Tipo de publicación</label>
+          <select id="tipo-evento" required>
+            <option value="Evento">Evento</option>
+            <option value="Reunión">Reunión</option>
+            <option value="Efeméride">Efeméride</option>
+            <option value="Actividad">Actividad</option>
+          </select>
+
+          <label for="titulo-evento">Título</label>
+          <input
+            type="text"
+            id="titulo-evento"
+            placeholder="Ej.: Reunión de representantes"
+            required
+          >
+
+          <label for="fecha-evento">Fecha</label>
+          <input type="date" id="fecha-evento" required>
+
+          <label for="hora-evento">Hora</label>
+          <input type="time" id="hora-evento">
+
+          <label for="lugar-evento">Lugar</label>
+          <input
+            type="text"
+            id="lugar-evento"
+            placeholder="Ej.: Patio central"
+          >
+
+          <label for="descripcion-evento">Descripción</label>
+          <textarea
+            id="descripcion-evento"
+            rows="5"
+            placeholder="Explique el propósito o información del evento"
+            required
+          ></textarea>
+
+          <label for="imagen-evento">Fotografía opcional</label>
+
+<input
+  type="file"
+  id="imagen-evento"
+  accept="image/jpeg, image/png, image/webp"
+>
+
+<p class="texto-ayuda">
+  Puede seleccionar una foto JPG, PNG o WEBP. Máximo recomendado: 5 MB.
+</p>
+
+          <button type="submit" class="boton boton-completo">
+            Publicar evento
+          </button>
+
+          <p id="mensaje-evento" class="mensaje-formulario"></p>
+
+        </form>
+      </article>
+
+      <article class="panel-formulario">
+        <h2>Publicar noticia o comunicado</h2>
+
+        <form id="formulario-noticia">
+
+          <label for="titulo-noticia">Título</label>
+          <input
+            type="text"
+            id="titulo-noticia"
+            placeholder="Ej.: Inicio de actividades escolares"
+            required
+          >
+
+          <label for="contenido-noticia">Contenido</label>
+          <textarea
+            id="contenido-noticia"
+            rows="8"
+            placeholder="Redacte el comunicado institucional"
+            required
+          ></textarea>
+
+          <label for="imagen-noticia">Fotografía opcional</label>
+
+<input
+  type="file"
+  id="imagen-noticia"
+  accept="image/jpeg, image/png, image/webp"
+>
+
+<p class="texto-ayuda">
+  Puede seleccionar una foto JPG, PNG o WEBP. Máximo recomendado: 5 MB.
+</p>
+
+          <button type="submit" class="boton boton-completo">
+            Publicar noticia
+          </button>
+
+          <p id="mensaje-noticia" class="mensaje-formulario"></p>
+
+        </form>
+      </article>
+
+    </section>
+
+    <section class="seccion-gestion">
+      <h2>Eventos publicados</h2>
+      <p class="texto-ayuda">
+        Verifique las publicaciones registradas. Puede eliminar las que ya no sean necesarias.
+      </p>
+
+      <div id="eventos-administrativos" class="lista-gestion">
+        <p class="cargando">Cargando eventos...</p>
+      </div>
+    </section>
+
+    <section class="seccion-gestion">
+      <h2>Noticias publicadas</h2>
+
+      <div id="noticias-administrativas" class="lista-gestion">
+        <p class="cargando">Cargando noticias...</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase.js"></script>
+  <script src="panel.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Acceso administrativo | CEIN Manuela Sáenz</title>
+
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body class="pagina-acceso">
+
+  <main class="contenedor-acceso">
+
+    <section class="tarjeta-acceso">
+
+      <a href="index.html" class="volver-inicio">
+        ← Volver a la página principal
+      </a>
+
+      <h1>Acceso administrativo</h1>
+
+      <p class="descripcion-acceso">
+        Ingrese con las credenciales asignadas para administrar eventos,
+        reuniones, actividades, efemérides, noticias y comunicados
+        institucionales.
+      </p>
+
+      <form id="formulario-login">
+
+        <label for="correo">Correo electrónico</label>
+
+        <input
+          type="email"
+          id="correo"
+          name="correo"
+          placeholder="correo@institucion.edu.ve"
+          required
+        >
+
+        <label for="contrasena">Contraseña</label>
+
+        <input
+          type="password"
+          id="contrasena"
+          name="contrasena"
+          placeholder="Ingrese su contraseña"
+          required
+        >
+
+        <button type="submit" class="boton boton-completo">
+          Iniciar sesión
+        </button>
+
+        <p id="mensaje-login" class="mensaje-formulario"></p>
+
+      </form>
+
+      <p class="nota-acceso">
+        El acceso es exclusivo para el personal autorizado del
+        CEIN “Manuela Sáenz”.
+      </p>
+
+    </section>
+
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase.js"></script>
+  <script src="login.js"></script>
+
+</body>
+</html>

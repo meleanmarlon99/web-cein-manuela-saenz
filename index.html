@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>CEIN Manuela Sáenz | Información Institucional</title>
+
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+
+  <header class="encabezado">
+    <div class="contenedor encabezado-contenido">
+
+      <div>
+        <h1>CEIN “Manuela Sáenz”</h1>
+        <p>Información para la comunidad educativa</p>
+      </div>
+
+      <nav class="menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#institucion">Institución</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#noticias">Noticias</a>
+        <a href="#contacto">Contacto</a>
+        <a href="login.html" class="acceso-admin">Acceso administrativo</a>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <section id="inicio" class="portada">
+      <div class="contenedor">
+        <p class="etiqueta-portada">Centro Educativo Inicial Nacional</p>
+
+        <h2>CEIN “Manuela Sáenz”</h2>
+
+        <p>
+          Espacio institucional para consultar información, actividades,
+          reuniones, efemérides, noticias y medios oficiales de contacto.
+        </p>
+
+        <a href="#eventos" class="boton">Consultar eventos</a>
+      </div>
+    </section>
+
+    <section class="aviso">
+      <div class="contenedor">
+        <p id="aviso-principal">
+          <strong>Aviso:</strong> Consulte esta página para mantenerse informado
+          sobre las actividades y comunicados institucionales.
+        </p>
+      </div>
+    </section>
+
+    <section id="institucion" class="seccion">
+      <div class="contenedor">
+
+        <h2>La institución</h2>
+
+        <div class="institucion-contenido">
+          <article class="texto-institucional">
+            <h3>Reseña institucional</h3>
+            <p>
+              El Centro Educativo Inicial Nacional “Manuela Sáenz” es una institución
+              orientada a la atención integral de los niños y niñas, promoviendo
+              experiencias educativas significativas, valores, participación familiar
+              y convivencia escolar.
+            </p>
+
+            <p>
+              Esta sección será ajustada posteriormente con la reseña histórica,
+              ubicación, características y demás información oficial contenida en el
+              informe institucional.
+            </p>
+          </article>
+
+          <article class="texto-institucional">
+            <h3>Misión</h3>
+            <p>
+              Favorecer el desarrollo integral de los niños y niñas a través de una
+              educación inicial inclusiva, participativa y orientada por valores.
+            </p>
+          </article>
+
+          <article class="texto-institucional">
+            <h3>Visión</h3>
+            <p>
+              Consolidarse como una institución educativa comprometida con la calidad,
+              la integración familia-escuela-comunidad y el bienestar de los niños y niñas.
+            </p>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="eventos" class="seccion fondo-claro">
+      <div class="contenedor">
+
+        <div class="titulo-seccion">
+          <h2>Eventos, reuniones y efemérides</h2>
+          <p>Información actualizada por el personal autorizado de la institución.</p>
+        </div>
+
+        <div id="lista-eventos" class="lista-contenido">
+          <p class="cargando">Cargando eventos...</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="noticias" class="seccion">
+      <div class="contenedor">
+
+        <div class="titulo-seccion">
+          <h2>Noticias y comunicados</h2>
+          <p>Información institucional de interés para la comunidad educativa.</p>
+        </div>
+
+        <div id="lista-noticias" class="tarjetas">
+          <p class="cargando">Cargando noticias...</p>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="contacto" class="seccion contacto">
+      <div class="contenedor">
+
+        <h2>Información de contacto</h2>
+
+        <div class="tarjetas">
+
+          <article class="tarjeta">
+            <h3>Teléfono</h3>
+            <p id="telefono-institucional">Por actualizar</p>
+          </article>
+
+          <article class="tarjeta">
+            <h3>Correo electrónico</h3>
+            <p>
+              <a id="correo-institucional" href="#">
+                Por actualizar
+              </a>
+            </p>
+          </article>
+
+          <article class="tarjeta">
+            <h3>Ubicación</h3>
+            <p id="ubicacion-institucional">
+              Maracaibo, estado Zulia, Venezuela.
+            </p>
+          </article>
+
+        </div>
+
+        <div class="nota-privacidad">
+          <p>
+            <strong>Protección de la información:</strong>
+            esta página está destinada a divulgar contenidos institucionales de
+            carácter público. No deben publicarse datos personales, documentos,
+            calificaciones, direcciones particulares ni fotografías de niños y niñas
+            sin las autorizaciones correspondientes.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie-pagina">
+    <div class="contenedor">
+      <p>© <span id="anio-actual"></span> CEIN “Manuela Sáenz”. Página informativa institucional.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
