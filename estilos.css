@@ -800,3 +800,128 @@ body {
     max-width: 100%;
   }
 }
+
+.cein-galeria {
+  padding: 64px 20px;
+  background: #f5f7fb;
+  scroll-margin-top: 100px;
+}
+
+.cein-galeria__contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.cein-galeria__encabezado {
+  max-width: 720px;
+  margin: 0 auto 32px;
+  text-align: center;
+}
+
+.cein-galeria__encabezado h2 {
+  margin: 0 0 12px;
+  color: #183153;
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+}
+
+.cein-galeria__encabezado p {
+  margin: 0;
+  color: #526174;
+  line-height: 1.7;
+}
+
+.cein-galeria__cuadricula {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.cein-galeria__tarjeta {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgb(0 0 0 / 6%);
+}
+
+.cein-galeria__enlace {
+  display: block;
+}
+
+.cein-galeria__enlace:focus-visible {
+  outline: 3px solid #2457a7;
+  outline-offset: -3px;
+}
+
+.cein-galeria__tarjeta img {
+  display: block;
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+}
+
+.cein-galeria__contenido {
+  padding: 20px;
+}
+
+.cein-galeria__contenido h3 {
+  margin: 0 0 10px;
+  color: #183153;
+  font-size: 1.15rem;
+}
+
+.cein-galeria__contenido p {
+  margin: 0;
+  color: #526174;
+  line-height: 1.65;
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 900px) {
+  .cein-galeria__cuadricula {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .cein-galeria {
+    padding: 40px 16px;
+  }
+
+  .cein-galeria__cuadricula {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Administración de fotografías */
+
+.imagen-gestion-galeria {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.descripcion-gestion-galeria {
+  white-space: pre-line;
+  overflow-wrap: anywhere;
+}
+
+#mensaje-gestion-galeria {
+  overflow-wrap: anywhere;
+}
+
+#boton-actualizar-galeria {
+  margin-bottom: 0.75rem;
+}
+
+#boton-actualizar-galeria:disabled,
+#galeria-administrativa button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
