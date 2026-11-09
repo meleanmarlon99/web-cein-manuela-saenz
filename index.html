@@ -24,6 +24,7 @@
         <a href="#institucion">Institución</a>
         <a href="#eventos">Eventos</a>
         <a href="#noticias">Noticias</a>
+        <a href="#galeria">Galería</a>
         <a href="#contacto">Contacto</a>
         <a href="login.html" class="acceso-admin">Acceso administrativo</a>
       </nav>
@@ -129,6 +130,33 @@
       </div>
     </section>
 
+<section
+  id="galeria"
+  class="cein-galeria"
+  aria-labelledby="galeria-titulo"
+>
+  <div class="cein-galeria__contenedor">
+
+    <header class="cein-galeria__encabezado">
+      <h2 id="galeria-titulo">
+        Galería de actividades
+      </h2>
+
+      <p>
+        Compartimos momentos de las actividades educativas,
+        culturales y comunitarias de nuestra institución.
+      </p>
+    </header>
+
+    <div id="galeria-publica" class="galeria-publica-cuadricula">
+  <p role="status">Cargando fotografías...</p>
+</div>
+
+  </div>
+
+</section>
+
+
     <section id="contacto" class="seccion contacto">
       <div class="contenedor">
 
@@ -183,5 +211,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script src="supabase.js"></script>
 <script src="script.js"></script>
+<script src="galeria-publica.js"></script>
+
 </body>
 </html>

@@ -145,6 +145,74 @@
 
         </form>
       </article>
+            <article class="panel-formulario">
+        <h2>Publicar fotografía en la galería</h2>
+
+        <form id="formulario-galeria">
+
+          <label for="titulo-galeria">Título de la actividad</label>
+          <input
+            type="text"
+            id="titulo-galeria"
+            placeholder="Ej.: Jornada de actividades recreativas"
+            maxlength="150"
+            required
+          >
+
+          <label for="descripcion-galeria">Descripción</label>
+          <textarea
+            id="descripcion-galeria"
+            rows="5"
+            placeholder="Cuente qué actividad se realizó"
+            maxlength="2000"
+            required
+          ></textarea>
+
+          <label for="texto-alternativo-galeria">
+            Descripción visual de la fotografía
+          </label>
+          <input
+            type="text"
+            id="texto-alternativo-galeria"
+            placeholder="Ej.: Participantes realizando una actividad de pintura"
+            maxlength="300"
+            required
+          >
+
+          <label for="imagen-galeria">Fotografía</label>
+          <input
+            type="file"
+            id="imagen-galeria"
+            accept="image/jpeg,image/png,image/webp"
+            aria-describedby="ayuda-imagen-galeria"
+            required
+          >
+
+          <p id="ayuda-imagen-galeria" class="texto-ayuda">
+            Seleccione una fotografía JPG, PNG o WEBP.
+            Límite previsto: 5 MB.
+          </p>
+
+          <button
+            type="submit"
+            id="boton-publicar-galeria"
+            class="boton boton-completo"
+            disabled
+          >
+            Publicar fotografía
+          </button>
+
+          <p
+            id="mensaje-galeria"
+            class="mensaje-formulario"
+            role="status"
+            aria-live="polite"
+          >
+            Publicación pendiente de conectar.
+          </p>
+
+        </form>
+      </article>
 
     </section>
 
@@ -167,11 +235,44 @@
       </div>
     </section>
 
+<section class="seccion-gestion">
+  <h2>Fotografías publicadas</h2>
+
+  <p class="texto-ayuda">
+    Revise las fotografías de la galería.
+    Puede eliminar las publicaciones realizadas con su cuenta.
+  </p>
+
+  <button
+    type="button"
+    id="boton-actualizar-galeria"
+    class="boton-secundario"
+  >
+    Actualizar lista
+  </button>
+
+  <p
+    id="mensaje-gestion-galeria"
+    class="mensaje-formulario"
+    role="status"
+    aria-live="polite"
+  ></p>
+
+  <div
+    id="galeria-administrativa"
+    class="lista-gestion"
+  >
+    <p class="cargando">Cargando fotografías...</p>
+  </div>
+</section>
+
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="supabase.js"></script>
   <script src="panel.js"></script>
+<script src="galeria-panel.js"></script>
+<script src="galeria-gestion.js"></script>
 
 </body>
 </html>
