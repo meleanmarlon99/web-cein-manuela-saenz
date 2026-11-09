@@ -2490,3 +2490,46 @@ body {
     padding: 22px;
   }
 }
+
+
+.pagina-publica #contacto .tarjetas {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.pagina-publica #contacto .tarjeta-horario-contacto {
+  border-top-color: #c4a4e7;
+}
+
+.pagina-publica #ubicacion-institucional,
+.pagina-publica #horario-institucional {
+  white-space: pre-line;
+}
+
+.pagina-publica #contacto .enlace-mapa[hidden] {
+  display: none;
+}
+
+.pagina-publica #contacto .tarjeta a:not([href]) {
+  color: #526174;
+  background-color: transparent;
+  text-decoration: none;
+  cursor: default;
+}
+
+.pagina-publica .estado-contacto-publico {
+  max-width: 800px;
+  margin: 24px auto 0;
+  color: #59491f;
+  line-height: 1.7;
+  text-align: center;
+}
+
+.pagina-publica .estado-contacto-publico:empty {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .pagina-publica #contacto .tarjetas {
+    grid-template-columns: 1fr;
+  }
+}

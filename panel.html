@@ -216,6 +216,103 @@
 
     </section>
 
+<section
+  class="seccion-gestion seccion-contacto-admin"
+  aria-labelledby="titulo-contacto-admin"
+>
+  <h2 id="titulo-contacto-admin">
+    Información de contacto
+  </h2>
+
+  <p class="texto-ayuda">
+    Actualice los datos institucionales que se mostrarán
+    en la página pública. Publique únicamente información
+    autorizada por la institución.
+  </p>
+
+  <div class="panel-formulario">
+    <form id="formulario-contacto">
+
+      <label for="contacto-telefono">
+        Teléfono institucional
+      </label>
+      <input
+        type="tel"
+        id="contacto-telefono"
+        autocomplete="off"
+        maxlength="50"
+        placeholder="Ej.: +58 261 0000000"
+      >
+
+      <label for="contacto-correo">
+        Correo institucional
+      </label>
+      <input
+        type="email"
+        id="contacto-correo"
+        autocomplete="off"
+        maxlength="254"
+        placeholder="Correo autorizado para contacto público"
+      >
+
+      <label for="contacto-direccion">
+        Dirección de la institución
+      </label>
+      <textarea
+        id="contacto-direccion"
+        rows="3"
+        maxlength="500"
+        placeholder="Sector, calle, municipio y estado"
+        required
+      ></textarea>
+
+      <label for="contacto-mapa">
+        Enlace de Google Maps
+      </label>
+      <input
+        type="url"
+        id="contacto-mapa"
+        maxlength="2000"
+        placeholder="https://maps.app.goo.gl/..."
+        aria-describedby="ayuda-contacto-mapa"
+      >
+
+      <p id="ayuda-contacto-mapa" class="texto-ayuda">
+        Pegue el enlace de la ubicación del plantel.
+      </p>
+
+      <label for="contacto-horario">
+        Horario de atención
+      </label>
+      <textarea
+        id="contacto-horario"
+        rows="2"
+        maxlength="300"
+        placeholder="Indique los días y las horas de atención"
+      ></textarea>
+
+      <button
+        type="submit"
+        id="boton-guardar-contacto"
+        class="boton boton-completo"
+        disabled
+      >
+        Guardar información de contacto
+      </button>
+
+      <p
+        id="mensaje-contacto"
+        class="mensaje-formulario"
+        role="status"
+        aria-live="polite"
+      >
+        Formulario pendiente de conectar.
+      </p>
+
+    </form>
+  </div>
+</section>
+
     <section class="seccion-gestion">
       <h2>Eventos publicados</h2>
       <p class="texto-ayuda">
@@ -273,6 +370,7 @@
   <script src="panel.js"></script>
 <script src="galeria-panel.js"></script>
 <script src="galeria-gestion.js"></script>
+<script src="contacto-panel.js"></script>
 
 </body>
 </html>
