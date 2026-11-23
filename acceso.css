@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+}
+
+body.pagina-acceso {
+  margin: 0;
+  min-height: 100vh;
+  padding: 32px 16px;
+  background: linear-gradient(135deg, #e8f6f8, #f4f6f8);
+  color: #253238;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+.contenedor-acceso {
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+.tarjeta-acceso {
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 12px 35px rgba(15, 63, 78, 0.12);
+  border-top: 6px solid #155e75;
+}
+
+.tarjeta-acceso h1 {
+  margin: 22px 0 12px;
+  color: #0f3f4e;
+  font-size: 1.8rem;
+}
+
+.tarjeta-acceso a {
+  color: #155e75;
+  text-underline-offset: 3px;
+}
+
+.descripcion-acceso,
+.nota-acceso {
+  color: #52636c;
+}
+
+.tarjeta-acceso label {
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.tarjeta-acceso input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #bacbd1;
+  border-radius: 8px;
+  font: inherit;
+}
+
+.tarjeta-acceso input:focus {
+  outline: 3px solid #ccebf2;
+  border-color: #155e75;
+}
+
+.tarjeta-acceso button {
+  width: 100%;
+  padding: 13px;
+  margin-top: 24px;
+  border: 0;
+  border-radius: 8px;
+  background: #155e75;
+  color: #ffffff;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.tarjeta-acceso button:hover {
+  background: #0f3f4e;
+}
+
+.tarjeta-acceso button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+.tarjeta-acceso a:focus-visible,
+.tarjeta-acceso button:focus-visible {
+  outline: 3px solid #f4b942;
+  outline-offset: 4px;
+}
+
+.opciones-cuenta {
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #dbe4e8;
+  text-align: center;
+}
+
+.aviso-aprobacion {
+  padding: 14px;
+  margin: 20px 0;
+  border-left: 4px solid #f4b942;
+  border-radius: 6px;
+  background: #fff7df;
+  color: #493c19;
+  font-size: 0.94rem;
+}
+
+.ayuda-campo,
+.nota-acceso {
+  font-size: 0.88rem;
+}
+
+.mensaje-formulario {
+  overflow-wrap: anywhere;
+}
+
+.mensaje-formulario:empty {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .tarjeta-acceso {
+    padding: 24px 20px;
+  }
+}

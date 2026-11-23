@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Crear cuenta | CEIN Manuela Sáenz</title>
+
+  <link rel="stylesheet" href="acceso.css">
+</head>
+
+<body class="pagina-acceso">
+  <main class="contenedor-acceso">
+    <section class="tarjeta-acceso" aria-labelledby="titulo-registro">
+
+      <a href="login.html">← Volver al inicio de sesión</a>
+
+      <h1 id="titulo-registro">Crear cuenta</h1>
+
+      <p class="descripcion-acceso">
+        Complete sus datos para solicitar acceso al sistema.
+      </p>
+
+      <div class="aviso-aprobacion">
+        La cuenta quedará pendiente e inactiva hasta que
+        un administrador apruebe la solicitud.
+      </div>
+
+      <form id="formulario-registro">
+
+        <label for="nombre-registro">Nombre completo</label>
+        <input
+          type="text"
+          id="nombre-registro"
+          name="nombre_completo"
+          autocomplete="name"
+          minlength="3"
+          maxlength="150"
+          required
+        >
+
+        <label for="correo-registro">Correo electrónico</label>
+        <input
+          type="email"
+          id="correo-registro"
+          name="correo"
+          autocomplete="email"
+          autocapitalize="none"
+          spellcheck="false"
+          required
+        >
+
+        <label for="clave-registro">Contraseña</label>
+        <input
+          type="password"
+          id="clave-registro"
+          name="contrasena"
+          autocomplete="new-password"
+          minlength="12"
+          aria-describedby="ayuda-clave"
+          required
+        >
+
+        <p id="ayuda-clave" class="ayuda-campo">
+          Utilice al menos 12 caracteres.
+        </p>
+
+        <label for="confirmar-clave">Confirmar contraseña</label>
+        <input
+          type="password"
+          id="confirmar-clave"
+          name="confirmacion"
+          autocomplete="new-password"
+          minlength="12"
+          required
+        >
+
+        <button type="submit">Crear cuenta</button>
+
+        <p
+          id="mensaje-registro"
+          class="mensaje-formulario"
+          role="status"
+          aria-live="polite"
+        ></p>
+
+      </form>
+
+      <div class="opciones-cuenta">
+        <a href="login.html">Ya tengo una cuenta</a>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase.js"></script>
+  <script src="registro.js"></script>
+</body>
+</html>
