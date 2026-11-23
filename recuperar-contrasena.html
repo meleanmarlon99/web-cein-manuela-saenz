@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Recuperar contraseña | CEIN Manuela Sáenz</title>
+
+  <link rel="stylesheet" href="acceso.css">
+</head>
+
+<body class="pagina-acceso">
+  <main class="contenedor-acceso">
+    <section class="tarjeta-acceso" aria-labelledby="titulo-recuperar">
+
+      <a href="login.html">← Volver al inicio de sesión</a>
+
+      <h1 id="titulo-recuperar">Recuperar contraseña</h1>
+
+      <p class="descripcion-acceso">
+        Escriba el correo asociado a su cuenta para solicitar
+        instrucciones de recuperación.
+      </p>
+
+      <form id="formulario-recuperar">
+        <label for="correo-recuperar">Correo electrónico</label>
+
+        <input
+          type="email"
+          id="correo-recuperar"
+          autocomplete="email"
+          autocapitalize="none"
+          spellcheck="false"
+          required
+        >
+
+        <button type="submit">
+          Enviar enlace de recuperación
+        </button>
+
+        <p
+          id="mensaje-recuperar"
+          class="mensaje-formulario"
+          role="status"
+          aria-live="polite"
+        ></p>
+      </form>
+
+      <div class="aviso-aprobacion">
+        Cambiar la contraseña no modifica el rol ni
+        aprueba una cuenta pendiente.
+      </div>
+
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase.js"></script>
+  <script src="recuperar-contrasena.js"></script>
+</body>
+</html>
