@@ -2643,3 +2643,133 @@ body {
     font-size: 0.95rem;
   }
 }
+
+.pagina-panel [hidden] {
+  display: none !important;
+}
+
+.pagina-panel .navegacion-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 24px 0;
+  padding: 12px;
+  background: #ffffff;
+  border: 1px solid #dbe4e8;
+  border-radius: 12px;
+}
+
+.pagina-panel .navegacion-panel__boton {
+  padding: 11px 20px;
+  border: 1px solid #c9dce2;
+  border-radius: 8px;
+  background: #f4f8fa;
+  color: #155e75;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.pagina-panel .navegacion-panel__boton:hover {
+  background: #e8f6f8;
+}
+
+.pagina-panel .navegacion-panel__boton[aria-pressed="true"] {
+  background: #155e75;
+  border-color: #155e75;
+  color: #ffffff;
+}
+
+.pagina-panel .contenido-panel {
+  min-width: 0;
+}
+
+.pagina-panel .cabecera-listado-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 24px 0 18px;
+}
+
+.pagina-panel .cabecera-listado-panel h2 {
+  margin: 0;
+  color: #0f3f4e;
+  font-size: 1.6rem;
+}
+
+.pagina-panel .boton-agregar-panel {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border: 0;
+  border-radius: 8px;
+  background: #155e75;
+  color: #ffffff;
+  font: inherit;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.pagina-panel .boton-agregar-panel:hover {
+  background: #0f3f4e;
+}
+
+.pagina-panel .boton-volver-lista {
+  display: inline-block;
+  padding: 9px 14px;
+  margin-bottom: 18px;
+  border: 1px solid #bacbd1;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #155e75;
+  font: inherit;
+  cursor: pointer;
+}
+
+.pagina-panel .boton-volver-lista:hover {
+  background: #e8f6f8;
+}
+
+.pagina-panel .boton-agregar-panel:focus-visible,
+.pagina-panel .boton-volver-lista:focus-visible,
+.pagina-panel .navegacion-panel__boton:focus-visible {
+  outline: 3px solid #f4b942;
+  outline-offset: 4px;
+}
+
+.pagina-panel .listado-panel-administrativo {
+  margin-top: 0;
+}
+
+.pagina-panel .contenido-panel > .panel-formulario {
+  width: 100%;
+  max-width: 850px;
+  margin: 0 auto 28px;
+}
+
+.pagina-panel .lista-gestion {
+  display: grid;
+  gap: 18px;
+}
+
+@media (max-width: 600px) {
+  .pagina-panel .navegacion-panel__boton {
+    flex: 1 1 120px;
+  }
+
+  .pagina-panel .cabecera-listado-panel {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .pagina-panel .boton-agregar-panel {
+    width: 100%;
+  }
+
+  .pagina-panel .cabecera-listado-panel h2 {
+    font-size: 1.35rem;
+  }
+}
