@@ -2773,3 +2773,35 @@ body {
     font-size: 1.35rem;
   }
 }
+
+.recuperacion-acceso {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.recuperacion-acceso .enlace-recuperacion {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: #155e75;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.recuperacion-acceso .enlace-recuperacion:hover {
+  background-color: #e8f6f8;
+  color: #0f3f4e;
+}
+
+.recuperacion-acceso .enlace-recuperacion:focus-visible {
+  outline: 3px solid #f4b942;
+  outline-offset: 3px;
+  background-color: #e8f6f8;
+  color: #0f3f4e;
+}
