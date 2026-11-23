@@ -94,19 +94,70 @@ async function subirImagenOpcional(inputId, carpeta) {
 }
 
 async function verificarSesion() {
-  const { data, error } = await supabaseClient.auth.getUser();
+  usuarioActual = null;
 
-  if (error || !data.user) {
-    window.location.href = "login.html";
-    return false;
+  const informacion = document.getElementById("correo-usuario");
+  const enlaceUsuarios = document.getElementById("enlace-usuarios");
+
+  if (enlaceUsuarios) {
+    enlaceUsuarios.hidden = true;
   }
 
-  usuarioActual = data.user;
+  try {
+    const { data, error } = await supabaseClient.auth.getUser();
 
-  document.getElementById("correo-usuario").textContent =
-    `Sesión activa: ${usuarioActual.email}`;
+    if (error || !data.user) {
+      window.location.replace("login.html");
+      return false;
+    }
 
-  return true;
+    const { data: perfil, error: errorPerfil } = await supabaseClient
+      .from("perfiles")
+      .select("id, nombre_completo, rol, activo")
+      .eq("id", data.user.id)
+      .maybeSingle();
+
+    if (errorPerfil) {
+      throw errorPerfil;
+    }
+
+    const autorizado =
+      perfil &&
+      perfil.activo === true &&
+      ["administrador", "editor"].includes(perfil.rol);
+
+    if (!autorizado) {
+      const { error: errorCierre } =
+        await supabaseClient.auth.signOut({ scope: "local" });
+
+      if (errorCierre) {
+        console.error("No se pudo cerrar la sesión local.");
+      }
+
+      window.location.replace("login.html");
+      return false;
+    }
+
+    usuarioActual = data.user;
+
+    informacion.textContent =
+      `Sesión activa: ${usuarioActual.email} | Rol: ${perfil.rol}`;
+
+    if (enlaceUsuarios) {
+      enlaceUsuarios.hidden = perfil.rol !== "administrador";
+    }
+
+    return true;
+
+  } catch (error) {
+    console.error("Error verificando el acceso al panel:", error);
+
+    informacion.textContent =
+      "No se pudo verificar el acceso. Recargue la página " +
+      "o vuelva al inicio de sesión.";
+
+    return false;
+  }
 }
 
 async function cargarEventos() {
